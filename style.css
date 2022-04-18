@@ -1,0 +1,240 @@
+:root {
+  --font-sans: "Calibre", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(185, 185, 185) transparent;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #000000;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#222222),
+    to(#000000)
+  );
+
+  background: linear-gradient(to left, #222222, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: var(--font-mono);
+  font-weight: lighter;
+  padding-bottom: 2rem;
+  opacity: 0.8;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 6rem;
+  opacity: 0.6;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 400;
+  max-width: 60rem;
+  padding-top: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+p span {
+  color: white;
+}
+
+.hero-section {
+  color: white;
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.email-link {
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 100;
+  text-decoration: none;
+  padding: 2rem;
+  border: 1px solid white;
+  margin-top: 5rem;
+  width: 20rem;
+  opacity: 0.8;
+  transition: background 0.25s;
+  border-radius: 0.5rem;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+
+}
+
+.email-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.socials{
+  position: fixed;
+  bottom: 0; 
+  left: 50px;
+}
+
+.socials ul{
+  list-style-type: none;
+}
+
+.social-item.icon{
+  width: 25px;
+  margin: 20px;
+  transition: transform .2s, color .2s;
+  cursor: pointer;
+}
+
+.socials:last-child{
+  margin-bottom: 0;
+}
+
+.social-item:last-child{
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: lightgray;
+}
+
+.social-item svg{
+  color: lightgray;
+}
+
+.social-item.icon:hover{
+  transform: translateY(-2px);
+}
+
+.social-item.icon:hover svg{
+  color: white;
+}
+
+.mail{
+  position: fixed;
+  bottom: 0; 
+  right: 50px;
+}
+
+.line{
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: lightgray;
+}
+
+.mail a{
+    writing-mode: vertical-rl;
+    color: lightgray;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90px;
+  padding: 0 50px;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px
+}
+
+.links .nav-item{
+  color: lightgray;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  cursor: pointer;
+  transition : color 0.1s;
+  text-decoration: none;
+}
+
+.links .nav-item:hover{
+  color: white;
+}
+
+.navbar .email-link{
+  height: 40px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  font-size: 13px;
+}
+
+.logo{
+  padding: 5px;
+  color: white;
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-decoration: none;
+}
+
+
+#about, #skills, #projects{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+  body {
+    padding: 0 4rem;
+  }
+  .container {
+    padding: 2rem 0;
+  }
+
+  h2,
+  h3 {
+    font-size: 5rem;
+  }
+}
